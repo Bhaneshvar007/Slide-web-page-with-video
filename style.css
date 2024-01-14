@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /* width: 100vw; */
+    height: 100vh;
+    /* background-color: rgba(192, 192, 192, 0.641); */
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: .5s transform;
+    /* overflow: hidden; */
+}
+
+.page {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(192, 192, 192, 0.541); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.669);
+    margin: 3.5vw 0;
+    user-select: none;
+
+}
+
+.page01 video {
+    filter: brightness(50%);
+}
+
+video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.page.active {
+    transform: translateY(0%);
+    /* margin-top: -3.5vw; */
+    animation: animate 1s ease-in-out 1;
+}
+
+@keyframes animate {
+    0%{
+        scale: 0.5;
+    }
+
+    50%{
+        scale: 1;
+    }
+}
+
+.homeSection-Conatiner {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5vw;
+    border-bottom: 2px solid white;
+}
+
+.homeSection-Conatiner p {
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: scale .5s;
+}
+
+.homeSection-Conatiner h3 {
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+}
+
+.homeSection-Conatiner p:active {
+    scale: 1.05;
+}
+
+.mainText-Container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainText-Container h1 {
+    font-size: 5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+.mainText-Container p {
+    font-size: 1vw;
+    color: #fff;
+    width: 70%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.mainText-Container button {
+    padding: .8vw 2vw;
+    background-color: transparent;
+    /* background: linear-gradient(45deg, #555555c8, rgba(220, 20, 60, 0.733), #444444d1); */
+    border: 2px solid white;
+    margin-top: 1vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    font-size: .8vw;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    transition: all .5s;
+}
+
+.mainText-Container button span {
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 5px;
+}
+
+/* background: linear-gradient(45deg, #555,crimson,#444); */
+.mainText-Container button:active {
+    border: 3px solid crimson;
+    scale: 1.05;
+
+}
+
+.socalMedia-Conainer {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border-top: 2px solid white;
+}
+
+.socalMedia-Conainer img {
+    /* height: 40px; */
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: scale .5s;
+}
+
+.socalMedia-Conainer img:active {
+    scale: 1.05;
+}
+
+.mouseEfact {
+    /* position: fixed; */
+    width: 50px;
+    height: 50%;
+    background-color: crimson;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
